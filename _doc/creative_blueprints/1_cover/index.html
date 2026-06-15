@@ -1,0 +1,54 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 55%; }
+  .mode-landscape .sl-visual { width: 45%; }
+  .mode-portrait .sl-content { width: 100%; padding-bottom: 1.5rem; }
+  .mode-portrait .sl-visual { width: 100%; height: 40%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Content column -->
+    <div class="sl-content flex flex-col justify-between p-10 bg-white">
+
+      <!-- Top label -->
+      <div class="flex items-center gap-2">
+        <div class="w-2.5 h-2.5 rounded-full bg-green-600"></div>
+        <span class="text-xs font-bold uppercase tracking-widest text-green-600">Browser Soccer Game</span>
+      </div>
+
+      <!-- Headline block -->
+      <div class="flex-1 flex flex-col justify-center gap-5">
+        <h1 class="text-5xl font-black leading-tight text-slate-900">
+          The Beautiful Game,<br/>
+          <span class="text-green-600">Played in Your Browser.</span>
+        </h1>
+        <p class="text-lg text-slate-500 max-w-xs leading-relaxed">
+          Real players. Real squads. Real matches — no downloads, no barriers, no hardware.
+        </p>
+        <div class="flex items-center flex-wrap gap-2 mt-1">
+          <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold">Realistic</span>
+          <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold">Instant Play</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold">Real Players</span>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual relative overflow-hidden bg-slate-900">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=professional%20soccer%20player%20striking%20ball%20stadium%20dramatic%20cinematic%20lighting%20green%20pitch%20night%20match"
+        class="w-full h-full object-cover"
+        alt="Soccer player in action"
+      />
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent via-slate-900/10 to-slate-900/30"></div>
+    </div>
+
+  </div>
+</section>
